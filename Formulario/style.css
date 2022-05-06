@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins, "Arial";
+    outline: none;
+}
+
+/*Cabeçalho*/
+header{
+    background-color: #222;
+    height: 70px;
+    width: 100%;
+}
+
+.center{
+    max-width: 800px;
+    padding:  0 2rem;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logoimg h1, header .logotxt h1{
+    color: white;
+    text-transform: uppercase;
+}
+
+header .logotxt h1{
+    font-size: 15pt;
+}
+
+/*Section*/
+section{
+    width: 100%;
+    height: auto;
+    padding: 2.5rem 2rem .5rem 2rem;
+}
+
+/*Article Protocolo e assunto*/
+#proto-assunto h3 span{
+    color: #C2642A;
+    font-size: 14pt;
+}
+
+#proto-assunto h3{
+    letter-spacing: .5px;
+}
+
+#proto-assunto .protocolo{
+    min-width: 300px;
+}
+
+#proto-assunto .assunto{
+    width: 72%;
+    margin-left: 1rem;
+}
+
+#proto-assunto{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: .8rem;
+}
+
+#proto-assunto .assunto label{
+    display: block;
+    font-weight: bold;
+}
+
+#proto-assunto .assunto input{
+    width: 100%;
+    padding: 1px .5rem;
+}
+
+#criador-assunto-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8rem;
+}
+
+/*Criador*/
+.criador, .tipo-assunto, .data-limite{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 10pt;
+    font-weight: 500;
+}
+
+.criador i{
+    font-size: 11pt;
+    color: #C2642A;
+}
+
+/*Tipo de assunto*/
+.tipo-assunto p, .data-limite p{
+    font-weight: bold;
+}
+
+.tipo-assunto #tipo-de-assunto{
+    width: 120px;
+}
+
+/*Data limite*/
+.data-limite p{
+    color: rgb(179, 46, 46);
+}
+
+/*Template Grid Layout*/
+#grid-layout{
+    display: grid;
+    grid-template-areas: 
+    "envio historico"
+    "envio descricao";
+    grid-template-columns: 340px 3fr;
+    gap: 1rem 2rem;
+}
+
+.envio {
+    height: calc(350px + 1rem);
+    background-color: rgb(223, 215, 223);
+    grid-area: envio;
+    padding: 1rem .8rem;
+    border-radius: 3px;
+}
+
+.historico{
+    height: 240px;
+    background-color: rgb(223, 215, 223);
+    grid-area: historico;
+    border-radius: 3px;
+}
+
+.descricao{
+    height: 110px;
+    background-color: rgb(223, 215, 223);
+    grid-area: descricao;
+    border-radius: 3px;
+}
+
+/*Envio*/
+.envio .abertura{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.envio .abertura h3{
+    font-size: 12pt;
+}
+
+.usuario-enviar{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(197, 194, 197);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem;
+    margin: 1.5rem 0;
+    border-radius: 3px;
+}
+
+.usuario-enviar .icone i{
+    font-size: 33pt;
+    color: #C2642A;
+    border: 2px solid #C2642A;
+    border-radius: 3px;
+}
+
+.usuario{
+    line-height: 15px;
+}
+
+.usuario select{
+    border: none;
+}
+
+.usuario p{
+    font-size: 10pt;
+}
+
+/*Anexar Arquivos*/
+
+.display-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 65px;
+}
+
+.anexar-arquivos h3{
+    font-size: 12pt;
+    margin-bottom: .2rem;
+
+}
+
+.comprovante, .relatorio{
+    width: 150px;
+    height: 65px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15pt;
+    border-radius: 3px;
+}
+
+.arquivo-icn{
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+.arquivo-icn i {
+    font-size: 23pt;
+    font-weight: 100;
+}
+
+.anexar-arquivos p{
+    font-size: 10pt;
+    color: #C2642A;
+}
+
+/*Historico*/
+.historico{
+    padding: .2rem .8rem;
+}
+
+.historico h4{
+    color: #C2642A;
+    font-size: 10pt;
+}
+
+.mensagens {
+    width: 100%;
+    background-color: white;
+    height: 85%;
+    padding: .3rem .8rem;
+    border-radius: 3px;
+}
+
+.mensagens p{
+    font-size: 11pt;
+}
+
+.mensagens h4{
+    color: black;
+    font-size: 11pt;
+}
+
+.msg2 {
+    margin-top: 1rem;
+}
+
+/*Descricao*/
+.descricao{
+    padding: .2rem .8rem;
+}
+
+.descricao h4{
+    color: #C2642A;
+    font-size: 10pt;
+}
+
+.msg-descricao{
+    width: 100%;
+    background-color: white;
+    height: 75px;
+    padding: .3rem .8rem;
+    border-radius: 3px;
+}

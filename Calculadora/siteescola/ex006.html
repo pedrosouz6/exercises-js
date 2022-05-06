@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var notas = []
+        notas[0] = Number(prompt("Primeira nota?"))
+        notas[1] = Number(prompt("Segunda nota?"))
+        notas[2] = Number(prompt("Terceira nota?"))
+        var soma = (notas[0] + notas[1] + notas[2]) / notas.length
+        if(soma < 6){
+            document.write(`Reprovado. Nota ${soma}`)
+        } else {
+            document.write(`Aprovado . Nota ${soma}`)
+        }
+    </script>
+</body>
+</html>

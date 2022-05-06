@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divP{
+            width: 600px;
+            height: 400px;
+            margin: 0px auto;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button{
+            font-size: 1.7rem;
+            outline: none;
+            height: 35vh;
+            width: 6.5%;
+            border: 1px black solid;
+            background-color: rgba(255, 255 ,255, 0.7);
+            cursor: pointer;
+            font-weight: 700;
+            margin: 10px;
+        }
+
+        .divLoad {
+            width: 100%;
+            height: 5px;
+            border: 1px solid black;
+            margin-top: 50vh;
+        }
+
+        .load {
+            width: 50%;
+            background-color: white;
+            height: 100%;
+        }
+    </style>
+    <script>
+        var imgs = []
+        var divNova
+        var bntEsquerda
+        var btnDireita
+        var btnLoad
+        var divLoad
+        function slide1(){
+            var s = 1
+            for(i = 0 ; i <3;i++){
+                imgs[i]=new Image()
+                imgs[i].src = s+".png"
+            }
+        }
+
+        function carregarIm(dg){
+            divNova.style.backgroundImage="url('"+imgs[dg].src+"')"
+        }
+
+        function ini(){
+            divNova = document.createElement("div")
+            divNova.className = "divP"
+            document.body.appendChild(divNova)
+            bntEsquerda = document.createElement("button")
+            bntEsquerda.innerHTML = "<"
+            divNova.append(bntEsquerda)
+            divLoad = document.createElement("div")
+            divLoad.className = "divLoad"
+            divNova.appendChild(divLoad)
+            btnLoad = document.createElement("div")
+            btnLoad.className = "load"
+            divLoad.appendChild(btnLoad)
+            btnDireita = document.createElement("button")
+            btnDireita.innerHTML = ">"
+            divNova.appendChild(btnDireita)
+            slide1()
+            var imAtual=0
+            carregarIm(imAtual)
+        }
+
+        window.addEventListener("load", ini)
+    </script>
+</head>
+<body>
+</body>
+</html>

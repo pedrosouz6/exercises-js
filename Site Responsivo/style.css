@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Poppins;
+    color: white;
+}
+
+#content {
+    width: 100%;
+    height: 100vh;
+    background: url(bg.jpg);
+    background-size: cover;
+    padding: 80px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    transition: 1s all;
+}
+
+#content.active{
+    right: 300px;
+    transition: 2s;
+}
+
+#header{
+    padding: 20px 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.logo h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.toggle{
+    border-top: 3px solid white;
+    width: 30px;
+    height: 28px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.toggle::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 8px;
+}
+
+.toggle::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 2px;
+}
+
+#content.active .toggle {
+    border-top: none;
+}
+
+#content.active .toggle::after{
+    transform: rotate(45deg);
+}
+
+#content.active .toggle::before{
+    transform: rotate(-48deg);
+    top: 8.5px;
+}
+
+h1#text{
+    font-size: 30pt;
+}
+
+h1#text span{
+    color: springgreen;
+}
+
+#nav ul{
+    list-style: none;
+}
+
+#nav ul i{
+    font-size: 14pt;
+}
+
+#nav ul i{
+    margin-bottom: .8rem;
+    color: rgba(255, 255, 255, .7);
+    transition: .3s;
+}
+
+#nav ul li:hover i{
+    color: rgba(255, 255, 255, 1);
+    transform: scale(1.11);
+}
+
+.menu{
+    width: 300px;
+    height: 100vh;
+    background-color: teal;
+    position: fixed;
+    right: 0;
+    top: 0%;
+    z-index: 1;
+    transition: 1s;
+}
+

@@ -1,0 +1,108 @@
+* {
+    border: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background: linear-gradient(45deg, rgb(20, 19, 19), rgb(245, 11, 11));
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    width: 400px;
+    height: 380px;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+}
+
+
+h2{
+    font-family: sans-serif;
+    color: rgb(124, 124, 124);
+    text-align: center;
+    font-size: 19pt;   
+}
+
+p{
+    font-family: sans-serif;
+    color: rgb(150, 150, 150);
+    font-size: 10pt;
+}
+
+p:first-child{
+    margin-top: 20px;
+}
+p{
+    margin: 5px 0px;
+}
+
+.input input{
+    background: rgba(128, 127, 127, 0.2);;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 12px;
+    font-size: 12pt;
+    
+}
+
+.input input::placeholder{
+    color: rgb(131, 131, 131);
+}
+
+input[type="checkbox"]{
+    margin: 10px 0px;
+    outline: none;
+}
+
+input[type="button"]{
+    width: 70%;
+    height: 41px;
+    border-radius: 7px;
+    margin: auto;
+    background: linear-gradient(45deg, rgb(20, 19, 19), rgb(245, 11, 11));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14pt;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover{
+    letter-spacing: 1px;
+    background: linear-gradient(345deg, rgb(20, 19, 19), rgb(245, 11, 11));
+}
+
+p:last-child{
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+}
+
+a::before{
+    content: '';
+    position: absolute;
+    height: .1px;
+    width: 120px;
+    bottom: -2px;
+    margin: auto 0px;
+    background: linear-gradient(45deg, rgb(20, 19, 19), rgb(245, 11, 11));
+}
+
+a{
+    text-decoration: none;
+    color: red;
+    font-size: 10.5pt;
+    font-family: sans-serif;
+}
+

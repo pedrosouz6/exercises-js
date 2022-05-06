@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(28, 28, 36);
+        }
+
+        h1{
+            color: white;
+            font-family: monospace;
+            text-align: center;
+            font-size: 25pt;
+            width: 40%;
+            margin: 30px auto;
+        }
+
+        h1::after{
+            content: "|";
+
+        }
+    </style>
+
+    <script>
+        function writeText(){
+            var h1 = document.querySelector("h1");
+            var texto = h1.innerHTML.split("");
+            h1.innerHTML = ""
+            texto.forEach((letra, i) => {
+                setTimeout( function(){
+                    h1.innerHTML += letra
+                }, 75*i)
+            })
+        }
+        window.addEventListener("load", writeText)
+    </script>
+</head>
+<body>
+    <h1>Cursos de Web Design, UX/UI Design, HTML, CSS, JavaScript e React</h1>
+</body>
+</html>

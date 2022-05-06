@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Formulário</title>
+</head>
+<body id="corpo">
+    <header id="cabecalho">
+        <h1>Formulário em HTML5 e CSS</h1>
+        <p>Preencha os dados abaixo</p>
+    </header>
+    <form id="formulario">
+        <fieldset id="infor">
+            <legend>Informações Pessoais</legend>
+            <p><label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" placeholder="Nome Completo" size="25" maxlength="25" ></p>
+            <p><label for="email">E-mail: </label>
+            <input type="email" name="email" id="email" placeholder="Digite seu melhor E-mail" size="25" maxlength="35"></p>
+            <p><label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua Senha" size="20" maxlength="15"></p>
+            <fieldset id="sexo">
+                <legend>Sexo</legend>
+                <p><label for="sexom">Masculino </label>
+                <input type="radio" name="sexo" id="sexom"></p>
+                <p><label for="sexof">Feminino</label>
+                <input type="radio" name="sexo" id="sexof"></p>
+            </fieldset>
+            <p><label for="idade">Data de Nascimento: </label>
+            <input type="date" name="idade" id="idade"></p>
+        </fieldset>
+        <fieldset id="loc">
+            <legend>Localização</legend>
+            <p><label for="estado">Estado: </label>
+                <select id="select">
+                    <optgroup label="Região Sudeste">
+                    <option>São Paulo</option>
+                    <option>Minas Gerais</option>
+                    <option>Santa Catarina</option>
+                    <option>Rio de Janeiro</option>
+                    <option disabled></option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste" id="nordeste">
+                    <option>Alagoas</option>
+                    <option>Bahia</option>
+                    <option>Ceará</option>
+                    <option>Maranhão</option>
+                    <option>Pernambuco</option>
+                    <option>Paraíba</option>
+                    <option>Rio Grande do Norte</option>
+                    <option>Sergipe</option>
+                    </optgroup>
+                    <optgroup label="Região Sul">
+                    <option>Paraná</option>
+                    <option>Rio Grande do Sul</option>
+                    <option>Santa Catarina</option>
+                    </optgroup>
+                    <optgroup label="Região Norte">
+                    <option>Acre</option>
+                    <option>Amazonas</option>
+                    <option>Amapá</option>
+                    <option>Pará</option>
+                    <option>Rondônia</option>
+                    <option>Roraima</option>
+                    <option>Tocantins</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p><label for="endereco">Endereço: </label>
+            <input type="text" name="endereco" id="endereco" placeholder="Cidade, Bairro, Rua..." size="30" maxlength="50"></p>
+            <p><label for="numero">Número: </label>
+                <input type="number" name="numero" id="numero" max="20" size="18" min="0" placeholder="Número/Casa">
+            </p>
+        </fieldset>
+        <input type="submit" value="Enviar" id="enviar">
+        <input type="reset" value="Limpar Tudo" id="limpar">
+
+    </form>
+
+    <footer id="rodape">
+        <p>Pedro Souza de Freitas <br> Youtube | Facebook</p>
+    </footer>
+    
+</body>
+</html>

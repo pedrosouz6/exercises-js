@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target</title>
+    <script>
+        function ini(){
+            document.querySelector("p").addEventListener("click", (e) =>{
+            const valor = e.target;
+            console.log()
+            })
+        }
+
+        window.addEventListener("load", ini)
+    </script>
+</head>
+<body>
+    <div id="txt1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus cupiditate repudiandae id quam ab incidunt <span data-p="Pedro" style="color: red;">Pedro</span> similique soluta quis quaerat maxime architecto eius nesciunt expedita, aspernatur beatae optio tempora nihil.</p> 
+    </div>
+</body>
+</html>

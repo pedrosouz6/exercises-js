@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .n{
+            color: rgb(95, 173, 114);
+        }
+    </style>
+    <script>
+        function ini(){
+            var btn = document.getElementById("add").addEventListener("click", function(){
+                var fnovo = document.getElementById("fnovo")
+                if(fnovo.value == ""){
+                    alert("Adicione o valor")
+                    li.style.display = "none"
+                }
+                var lista = document.getElementsByClassName("lista")[0]
+                var li = document.createElement("li")
+                li.className = "n"
+                lista.appendChild(li)
+                li.innerHTML = fnovo.value
+                fnovo.value = ""
+                fnovo.focus()
+            }
+            )
+        }
+        window.addEventListener("load", ini)
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="fnovo"><button id="add">Adicionar</button>
+    <ul class="lista"></ul>
+</body>
+</html>

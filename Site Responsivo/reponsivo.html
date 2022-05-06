@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/ae16fa8f17.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="content">
+        <header id="header">
+            <div class="logo">
+                <h1>Logo</h1>
+            </div>
+            <div class="toggle"></div>
+        </header>
+            <h1 id="text">Responsive Website Created <br> By <span>Pedro Souza</span></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </nav>
+    </section>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portifolio</a></li>
+                <li><a href="#">Contat</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        function menuToggle(){
+            const togg = document.getElementsByClassName("toggle")[0].addEventListener("click", ()=>{
+                document.getElementById("content").classList.toggle("active");
+            })
+        }
+        menuToggle()
+    </script>
+</body>
+</html>

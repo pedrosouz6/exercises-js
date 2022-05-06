@@ -1,0 +1,79 @@
+<!--<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Carro {
+            constructor(cor1, modelo, objetos){
+                this.corCarro = cor1
+                this.modelo = modelo
+                this.objetos = objetos
+                this.ligado
+            }
+
+            info(){
+                console.log("Cor " + this.corCarro)
+                console.log("Modelo " + this.modelo)
+                console.log("Objeto " + this.objetos)
+                console.log("Ligado " + (this.ligado ? "Sim" : "Não"))
+                console.log("")
+            }
+
+            ligar(){
+                this.ligado=true
+            }
+            desligar(){
+                this.ligado=false
+            }
+
+        } 
+        var frase1 = new Carro("Azul", "Ferrari 245", "Roda",)
+        var frase2 = new Carro("Verde", "Camaro", "Voulante")
+        var frase3 = new Carro("Branco", "Corvette", "Pneu")
+
+        frase1.corCarro = "Preto"
+        frase1.ligar()
+        frase2. ligar()
+
+        frase1.info()
+        frase2.info()
+        frase3.info()
+        
+    </script>
+</head>
+<body>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <script>
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+                this.age()
+                
+            }
+
+            age(){
+                let anoCarro = new Date();
+                let d = anoCarro.getFullYear() - this.year;
+                console.log(d)
+            }
+        }
+        var c = new Car("Camaro", 2009)
+        
+    </script>
+</body>
+</html>

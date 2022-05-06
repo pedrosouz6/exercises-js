@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function inicio(){
+            document.getElementById("add").addEventListener("click", function(){
+                var fnovo = document.getElementById("novoI")
+                var lista = document.getElementById("lista")
+                var li = document.createElement("li")
+                li.innerHTML = fnovo.value
+                lista.appendChild(li)
+                if(fnovo.value == ""){
+                    alert("Adicione um item")
+                    li.style.display = "none"
+                }
+                fnovo.value = ""
+                fnovo.focus()
+            })
+        }
+        window.addEventListener("load", inicio)
+    </script>
+</head>
+<body>
+    <input type="text" id="novoI"><button id="add">Adicionar</button>
+    <ul id="lista"></ul>
+</body>
+</html>

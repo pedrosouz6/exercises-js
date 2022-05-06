@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.slide{
+    margin: auto;
+    max-width: 340px;
+    height: 300px;
+    border: 1px solid black;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: .5rem;
+    position: relative;
+    background-image: 8s ease;
+}
+
+.barraLoad{
+    width: 100%;
+    height: 6px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    margin-top: 60%;
+}
+
+.carregamento{
+    width: 0%;
+    background-color: rgba(255, 255, 255, .7);
+    height: 100%;
+}
+
+.balls{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    display: flex;
+    gap: .3rem;
+}
+
+.balls div{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.balls div.active{
+    background-color: rgba(255, 255, 255, .7);
+}
+
+#voltar, #next{
+    width: 25px;
+    height: 130px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, .8);
+    display: flex;
+    justify-content: center;
+    font-size: 16pt;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#voltar:hover, #next:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 1);
+}
+
+.interacoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}

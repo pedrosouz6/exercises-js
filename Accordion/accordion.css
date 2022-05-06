@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#accordion{
+    width: 72%;
+    margin: 0 auto;
+}
+
+.label{
+    width: 100%;
+    height: 6.5vh;
+    background-color: rgb(241, 40, 40);
+    position: relative;
+    cursor: pointer;
+    padding-left: 1.4rem;
+    color: rgba(255, 255, 255, .7);
+}
+
+.label h1 {
+    font-weight: 600;
+    font-size: 16pt;
+    line-height: 6.5vh;
+}
+
+.label::before{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.4rem;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.contentBx.active .label::before{
+    content: "-";
+}
+
+.conteudo {
+    background-color: rgba(255, 255, 255, .7);
+    position: relative;
+    height: 0px;
+    overflow: auto;
+    transition: .4s;
+    
+}
+
+.contentBx.active .conteudo{
+    height: 100px;
+}
+
+.conteudo p {
+    text-indent: 1.4rem;
+}
+
+.contentBx {
+    position: relative;
+    margin: 10px 20px;
+}

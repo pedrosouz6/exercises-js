@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #quadro{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+        }
+
+        #inicio{
+            margin-top: 60px;
+        }
+
+        #parar{
+            margin-top: 60px;
+        }
+    </style>
+    <script>
+        var px
+        var vel
+        var dx
+        var quadro
+        var anima
+        var inicio
+        function ini() {
+            vel = 10
+            dx = 1
+            px= 0
+            quadro=document.getElementById("quadro")
+            inicio=document.getElementById("parar").addEventListener("click", function(){
+                cancelAnimationFrame(anima)
+            })
+            game()
+        }
+
+        function game(){
+            px+=(dx*vel)
+            quadro.style.left=px+"px"
+            if(px > 800){
+                dx=-1
+            } else if(px < 0){
+                dx=1
+            }
+            anima=requestAnimationFrame(game)
+        }
+
+        window.addEventListener("load", ini)
+    </script>
+</head>
+<body>
+    <div id="quadro"></div>
+    <button id="inicio">Inicio</button>
+    <button id="parar">Parar</button>
+</body>
+</html>

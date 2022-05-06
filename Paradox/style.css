@@ -1,0 +1,51 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#firstImage{
+    background: url(imagens/maldivas.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: .8;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#firstImage p {
+    font-size: 40pt;
+    text-align: center;
+    padding: 2vh 5vw;
+    background-color: aquamarine;
+}
+
+#firstText{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    background-color: cadetblue;
+}
+
+#firstText p {
+    width: 80%;
+    font-size: 14pt;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: justify;
+    transform: translate(-50%, -50%);
+}
+
+#secondImage{
+    width: 100%;
+    height: 60vh;
+    background: url(imagens/arvores.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

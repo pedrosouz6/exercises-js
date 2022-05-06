@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        header{
+            height: 65px;
+            width: 100%;
+            background-color: rgb(218, 216, 214) ;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        header h1 {
+            text-transform: uppercase;
+            font-size: 19pt;
+            font-weight: 700;
+            letter-spacing: .4px;
+        }
+
+        nav ul{
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            padding: .5rem 1rem;
+            font-size: 12pt;
+            text-transform: uppercase;
+            font-weight: 500;
+            cursor: pointer;
+            margin-right: 7px;
+        }
+
+        nav ul li:last-child{
+            margin-right: 0px;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            font-size: 20pt;
+            background-color: rgb(218, 216, 214) ;
+            display: none;
+            cursor: pointer;
+            padding: .4rem .9rem;
+        }
+
+        @media (max-width: 700px){
+            button{
+                display: block;
+            }
+
+            nav ul{
+                visibility: hidden;
+                position: absolute;
+                right: 0%;
+                width: 100%;
+                top: 65px;
+                background-color: rgb(218, 216, 214);
+                display: block;
+            }
+
+            nav.active{
+                height: calc(100vh - 65px);
+            }
+
+            nav ul.active li {
+                width: 100%;
+                border-bottom: 1px solid rgb(255, 255, 255);
+                text-align: center;
+                padding: 1rem;
+            }
+        }
+    </style>
+    <script>
+        var btn
+        var lista
+        function btnClick(){
+            btn=document.getElementById("btnClick").addEventListener("click", function(){
+                lista=document.getElementById("lista")
+                lista.classList.toggle("active")
+            })
+        }
+        window.addEventListener("load", btnClick)
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Logotipo</h1>
+    <nav>
+        <button id="btnClick">&#9776;</button>
+        <ul id="lista">
+            <li>Loja</li>
+            <li>Sobre</li>
+            <li>Contato</li>
+        </ul>
+    </nav>
+    </header>
+</body>
+</html>

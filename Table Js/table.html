@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <script src="https://kit.fontawesome.com/ae16fa8f17.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <section>
+        <div class="title">
+            <h1>Lista de Produtos</h1>
+            <p>Lista de produtos da minha lista</p>
+        </div>
+
+        <div class="container">
+            <p><label for="produto">Produto</label></p>
+            <input type="text" name="produto" id="produto" placeholder="Nome do produto">
+
+            <p><label for="valor">Valor</label></p>
+            <input type="number" name="valor" id="valor" placeholder="Digite o valor do produto">
+
+            <button id="salvar" onclick="chamar.salvar()">Salvar</button>
+            <button id="cancelar">Cancelar</button>
+        </div><!--Inputs-->
+
+        <div class="content-table">
+            <table>
+                <thead>
+                    <td class="center">ID</td>
+                    <td>Produto</td>
+                    <td>Preço</td>
+                    <td class="center">Ações</td>
+                </thead>
+                <!-- <tbody>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        Geladeira
+                    </td>
+                    <td>
+                        1300
+                    </td>
+                    <td>
+                        <span>
+                            <i class="fas fa-trash"></i>
+                        </span>
+                        <span>
+                            <i class="far fa-edit"></i>
+                        </span>
+                    </td>
+                </tbody>-->
+            </table>
+        </div><!--Table-->
+    </section>
+
+    <script src="table.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+body#corpo {
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0,0,0, 0.8);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form#formulario{
+    padding: 20px;
+
+}
+
+footer#rodape {
+    border-top: 2px solid rgb(117, 117, 117);
+    
+}
+
+footer#rodape p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    text-align: center;
+}
+
+header#cabecalho {
+    border-bottom: 2px solid rgb(146, 144, 144);
+}
+
+header#cabecalho h1 {
+    font-size: 18pt;
+    font-family: cursive;
+    color: rgb(146, 144, 144);
+    text-align: center;
+}
+
+header#cabecalho p {
+    font-family: serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 14pt;
+    text-decoration: underline;
+    text-align: center;
+
+}
+form#formulario legend {
+    color: rgb(105, 104, 104);
+    font: bold 13pt arial;
+}
+
+input#enviar {
+    margin-top: 30px;
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+input#enviar:hover {
+    background-color: rgb(146, 144, 144);
+}
+
+input#limpar {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+input#limpar:hover {
+    background-color: rgb(146, 144, 144);
+}
+
+input:hover {
+    background-color: rgba(235, 233, 233, 0.5);
+}
+
+input {
+    padding: 3px;
+}
+
+form#formulario fieldset#sexo {
+    width: 200px;
+    height: 70px;
+}
+
+form#formulario fieldset#sexo p{
+    margin-bottom: 3px;
+    margin-top: 0px;
+}
+
+form#formulario fieldset#infor {
+    margin-bottom: 10px;
+}
+
+form#formulario fieldset#loc {
+    margin-top: 10px;
+}

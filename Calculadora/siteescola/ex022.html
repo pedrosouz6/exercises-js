@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        #quadrado{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+    <script>
+        var py =0
+        var px =0
+        function inicia(){
+            var obj = document.getElementById("quadrado")
+                var tecla = event.keyCode
+                if(tecla == 37){
+                    px-=10
+                    obj.style.left=px+"px"
+                    obj.innerHTML = "Esquerda"
+                    
+                } else if(tecla == 38){
+                    py-=10
+                    obj.style.top=py+"px"
+                    obj.innerHTML = "Cima"
+                } else if(tecla == 39){
+                    px+=10
+                    obj.style.left=px+"px"
+                    obj.innerHTML = "Direita"
+                } else if(tecla == 40){
+                    py+=10
+                    obj.style.top=py+"px"
+                    obj.innerHTML = "Baixo"
+                }
+            }
+            document.addEventListener("keydown", inicia)
+    </script>
+</head>
+<body>
+    <div id="quadrado"></div>
+</body>
+</html>

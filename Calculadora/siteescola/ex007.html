@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dia = Number(prompt("Qual o seu dia?"))
+        var mes = Number(prompt("Qual o seu mês?"))
+        var ano = Number(prompt("Qual o ano do seu nascimento?"))
+        var data = new Date()
+        var anoNasc = data.getFullYear()
+        var somaAno = anoNasc - ano
+        var mesNasc = data.getMonth()
+        var somaMes = mesNasc - mes
+        var diaNasc = data.getDay()
+        var somaDia = diaNasc - dia
+        var mulD = somaAno * 365
+        var mulM = somaMes * 30
+        var somat = mulD + mulM + somaDia
+        document.write(`${mulD}`)
+    </script>
+</body>
+</html>

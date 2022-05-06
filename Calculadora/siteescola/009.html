@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            width: 70%;
+        }
+        .imgs{
+            margin: 10px;
+            width: 200px;
+            height: 250px;
+            margin: auto;
+            background-color: blue;
+        }
+        p{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            position: absolute;  
+        }
+
+        .p {
+            position: relative;
+            background: thistle;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p#nome {
+            margin-top: 0px;
+        }
+        p#sobre {
+            background-color: yellow;
+            width: 80px;
+            height: 20px;
+            color: teal;
+            opacity: 0;
+        }
+    </style>
+
+    <script>
+        function o(){
+            var adc = document.getElementById("sobre")
+            var n = document.getElementById("nome")
+            adc.style.transition = "ease 1s"
+            adc.style.border = "1px solid white"
+            adc.style.padding = "3px"
+            adc.style.opacity = "1"
+            n.style.opacity = "0"
+        }
+
+        function f(){
+            var adc = document.getElementById("sobre")
+            adc.style.opacity = "0"
+            var n = document.getElementById("nome")
+            n.style.opacity = "1"
+        }
+
+        function eventos(){
+            var ad = document.getElementById("i")
+            ad.addEventListener("mouseover",o)
+            ad.addEventListener("mouseout",f)
+        }
+        window.addEventListener("load", eventos)
+    </script>
+</head>
+<body>
+    <main>
+        <div class="imgs">
+            <img src="1g.png" alt="" srcset="">
+            <div id="p">
+                <p id="nome">Pedro</p>
+                <p id="sobre">Souza</p>
+            </div>
+        </div>
+        <div class="imgs">
+            <img src="2g.png" alt="" srcset="">
+            <div class="p">
+                <p id="nome">Pedro</p>
+                <p id="sobre">Souza</p>
+            </div>
+        </div>
+        <div class="imgs">
+            <img src="3g.png" alt="" srcset="">
+            <div class="p">
+                <p id="nome">Pedro</p>
+                <p id="sobre">Souza</p>
+            </div>
+        </div>
+        <div class="imgs">
+            <img src="4g.png" alt="" srcset="">
+            <div class="p">
+                <p id="nome">Pedro</p>
+                <p id="sobre">Souza</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

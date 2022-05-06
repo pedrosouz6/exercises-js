@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="img"></div>
+
+    <script>
+        async function ApiImagem(){
+            const res = await fetch('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fpt-br%2Fapi%2F&psig=AOvVaw3_onU0CL22NkLu5OxPEoGJ&ust=1636901781587000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNCO6LzMlfQCFQAAAAAdAAAAABAD');
+            const imgDiv = document.getElementById('img')
+            imgDiv.innerHTML = `<img src="${res.url}"/>`
+        }
+
+        ApiImagem()
+    </script>
+</body>
+</html>

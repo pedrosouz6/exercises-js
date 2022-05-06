@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map, Reduce e Filter</title>
+    <script>
+        const lineItems = [
+            { description: 'Ovos (Dozen)', quantity: 1, price: 3, total: 3 },
+            { description: 'Queijo', quantity: 0.5, price: 5, total: 2.5 },
+            { description: 'Manteiga', quantity: 2, price: 6, total: 12 }
+        ];
+
+        const resul = lineItems
+        .filter(produtoFiltrado => produtoFiltrado.total >= 3)
+        .map(produtoDobro => produtoDobro.total * 2)
+        .reduce((produtoSoma1, produtoSoma2) => {
+            return produtoSoma1 + produtoSoma2.total
+        })
+        
+        console.log(resul)
+
+        //Map
+
+        /*function dobro(produtoDobro){
+            return produtoDobro.total +2
+        }
+
+        function filtra(produtoFiltrado){
+            return produtoFiltrado.total >= 3
+        }
+
+        function somar(produtoSoma1, produtoSoma2){
+            return produtoSoma1 + produtoSoma2 
+        }
+
+        const dobrodeTotal = lineItems
+        .filter(filtra)
+        .map(dobro)
+        .reduce(somar)
+        
+
+        console.log(dobrodeTotal)*/
+
+        
+
+
+        
+      
+        
+        
+        //console.log(`O valor total é ${resultadoTotal}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

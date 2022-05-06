@@ -1,0 +1,52 @@
+body{
+    width: 1100px;
+    margin: auto;
+    border: 1px solid rgb(255, 0, 0);
+    background-color: black;
+}
+
+/* 200px nav width // 630px height
+200px aside // 630px hei
+650px conteudo // 630px
+footer 50px // 70px */ 
+
+
+header {
+    background-color: blue;
+    height: 100px;
+    color: white;
+}
+nav{   
+    width: 100px;
+    height: 630px;
+    color: white;
+    background-color: blue;
+    margin: 10px 10px 10px 0px;
+    float: left;
+}
+section {
+    width: 860px;
+    height: 630px;
+    background-color: blue;
+    float: left;
+    margin: 10px 0px 10px 0px;
+}
+
+aside {
+    width: 100px;
+    height: 630px;
+    color: white;
+    background-color: blue;
+    margin: 10px 0px 10px 0px;
+    float: right;
+    
+}
+
+footer {
+    width: 1100px;
+    height: 70px;
+    background-color: blue;
+    float: left;
+
+}
+

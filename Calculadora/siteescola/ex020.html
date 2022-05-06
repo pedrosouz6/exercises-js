@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inicia(){
+            var btn = document.getElementById("btn").addEventListener("click", function(){
+                var num = document.getElementById("number")
+                if(num.value == ""){
+                    alert("Adicione um número")
+                    li.style.display = "none"
+                }
+                var ul = document.getElementById("lista")
+                var li = document.createElement("li")
+                ul.insertBefore(li, ul.childNodes[0])
+                li.innerHTML = num.value
+                num.value = ""
+                num.focus()
+            })
+        }
+        window.addEventListener("load", inicia)
+    </script>
+</head>
+<body>
+    <input type="text" id="number"><button id="btn">Adicionar</button>
+    <ul id="lista"></ul>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        #resultado {
+            width: 200px;
+            height: 80px;
+            border: 2px solid #222;
+            border-radius: 8px;
+            padding: 2px 4px;
+        }
+
+        .carro {
+            display: inline-block;
+            width: 100px;
+            height: 250px;
+            background-color: cadetblue;
+            
+        }
+    </style>
+
+    <script>
+
+        function ini(){
+            const carros = document.getElementsByClassName("carro");
+            for(i = 0; i <= carros.length; i++){
+                carros[i].addEventListener("click", () => {
+                    const valor = event.target;
+                    const res = document.getElementById("resultado");
+                    res.innerHTML = `<p> Marca: ${valor.dataset.marca} </p>`
+                    res.innerHTML += `<p> Cor: ${valor.dataset.cor} </p>`
+                    res.innerHTML += `<p> Ano: ${valor.dataset.ano} </p>`
+                })
+            }
+        }
+
+        window.addEventListener("load", ini)
+
+    </script>
+</head>
+<body>
+    <div id="resultado">
+    </div>
+
+    <div class="carro" data-marca="Ferrari" data-cor="Amarelo" data-ano="2009"></div>
+    <div class="carro" data-marca="Bugatti" data-cor="Azul" data-ano="2020"></div>
+    <div class="carro" data-marca="Mercedes" data-cor="Preto" data-ano="2015"></div>
+</body>
+</html>

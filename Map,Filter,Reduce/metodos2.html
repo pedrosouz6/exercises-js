@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos 2</title>
+    <script>
+        const users = [{
+            name: 'Fernando S. Maransatto',
+            age: 32,
+            weight: 113.2,
+            gender: 'male',
+            city: 'Pompéia',
+            state: 'SP'
+        },{
+            name: 'Dona Maria',
+            age: 39,
+            weight: 70,
+            gender: 'female',
+            city: 'São Paulo',
+            state: 'SP'
+        },{
+            name: 'Miguel Silva',
+            age: 9,
+            weight: 41.6,
+            gender: 'male',
+            city: 'Rio e Janeiro',
+            state: 'RJ'
+        },{
+            name: 'José da Silva',
+            age: 40,
+            weight: 77.1,
+            gender: 'male',
+            city: 'Brasilia',
+            state: 'DF'
+        },
+        {
+            name: 'Ana Paula',
+            age: 32,
+            weight: 69.6,
+            gender: 'female',
+            city: 'Bauru',
+            state: 'SP'
+        }];
+
+
+        //Filter
+
+        //Acima do Peso
+        const acimaPeso = users.filter(peso => peso.weight > 75);
+        console.log(`Pessoa acima de 75Kg`, acimaPeso);
+
+        //Idade menor que 35 anos
+        const idadeMenor = users.filter(idade => idade.age < 35);
+        console.log(`Pessoas menor que 35 anos`, idadeMenor);
+
+        //Pega todos os masculinos
+        const sexoMasculino = users.filter(masculino => masculino.gender === "male");
+        console.log(`Pessoas do sexo masculino`, sexoMasculino);
+
+        //Pega todos os que moram no estado de São Paulo
+        const moradoresSP = users.filter(moradores => moradores.state === "SP");
+        console.log(`Moradores de São Paulo`, moradoresSP);
+
+
+        //Map
+
+        //Traz um array com todos os nomes
+        const todosNomes = users.map(nomes => nomes.name);
+        console.log(todosNomes);
+
+        //Traz um array com todas as idades. 
+        const idade = users.map(idade => idade.age);
+        console.log(idade)
+        
+        
+        //Traz um array de objeto com apenas o nome e o gênero
+        const nomesGeneros = users.map(nomeGenero => ({
+            nome: nomeGenero.name,
+            genero: nomeGenero.gender
+        }));
+        console.log(nomesGeneros);
+        
+        //Traz ums array com o primeiro nome de todos
+        const primeiroNone = users.map(priNome => priNome.name.split(" ")[0]);
+        console.log(primeiroNone);
+        //primeiroNone.forEach((valor) => {
+        //    console.log(valor[0])
+        //});
+
+
+        //Reduce
+
+        //Pega a soma do peso de todos
+        const somaPeso = users.reduce((acumulador, recebe) => {
+            return acumulador + recebe.weight
+        }, 0);
+        console.log(somaPeso);
+
+        //Pega a soma de idade de todos
+        const idadeTotal = users.reduce((acumulador, recebe) => {
+            return acumulador + recebe.age
+        }, 0);
+        console.log(idadeTotal);
+
+        //Pega o número total de caracteres no nome de todos os usuários
+        const numeroUsuario = users.reduce((acumulador, recebe) =>{
+            return acumulador + recebe.name.length
+        }, 0)
+        console.log(numeroUsuario)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

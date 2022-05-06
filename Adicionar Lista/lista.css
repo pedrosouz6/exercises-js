@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body{
+    width: 100%;
+    background: #525357;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 50%;
+    height: 98vh;
+    background: #F2F2F2;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 15% 0px 15% 0px;
+    overflow-y: auto;
+}
+
+main h1{
+    text-align: center;
+    font-size: 20pt;
+    color: #525357;
+    font-weight: 500;
+    margin-bottom: 5%;
+}
+
+.adicionarEenviar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3%;
+}
+
+.adicionarEenviar input {
+    width: 75%;
+    height: 6.2vh;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 13pt;
+    background: none;
+    border-bottom: 2px solid #525357;
+}
+
+.adicionarEenviar button{
+    width: 15%;
+    height: 6.2vh;
+    border: none;
+    background-color: #525357;
+    color: #F2F2F2;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    cursor: pointer;
+} 
+
+li{
+    width: 100%;
+    min-height: 5vh;
+    list-style: none;
+    border-bottom: 2px solid #525357;
+    margin-bottom: 1.5%;
+    overflow: hidden; 
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+li button{
+    position: absolute;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 13pt;
+    color: #525357;
+    cursor: pointer;
+}

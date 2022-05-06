@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter 4</title>
+    <script>
+        const produtos = [
+            {id: 1, descricao: "Smartphone", categoria: "Eletrônico"},
+            {id: 2, descricao: "Notebook", categoria: "Eletrônico"},
+            {id: 3, descricao: "Geladeira", categoria: "Eletrodoméstico"},
+            {id: 4, descricao: "Liquidificador", categoria: "Eletrodoméstico"},
+            {id: 5, descricao: "Fogão", categoria: "Eletrodoméstico"}
+        ]
+
+        const produtosFiltrados = produtos.filter((valor) => {
+            console.log(valor.descricao, valor.categoria)
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

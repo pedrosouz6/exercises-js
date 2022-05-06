@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inicia(){
+            var btn =document.getElementById("btn").addEventListener("click", function(){
+                var txt = document.getElementById("txt")
+                var p = document.getElementsByTagName("p")
+                for(i = 0; i < p.length; i++){
+                    p[i].removeAttribute("style")
+                }
+                var at = document.createAttribute("style")
+                at.value = "color:#f00;"
+                p[1].innerHTML = "C++"
+                p[txt.value].setAttributeNode(at)
+                txt.value = ""
+                txt.focus()
+            }) 
+        }
+        window.addEventListener("load", inicia)
+    </script>
+</head>
+<body>
+    <input type="number" id="txt" max="4" placeholder="Número entre 0 e 4">
+    <button id="btn">Executar</button>
+    <p>JavaScript</p>
+    <p>Python</p>
+    <p>C##</p>
+    <p>PHP</p>
+    <p>Java</p>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ae16fa8f17.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Lista de Cadastro</h1>
+    </header>
+    <section id="section-lista-de-cadastro">
+        <div class="section-cadastro-fitrar">
+            <button id="section-cadastrar" class="section-butoes">Cadastrar</button>
+        </div>
+        <table id="section-tabela">
+            <thead>
+                <tr>
+                    <td>Nome</td>
+                    <td>Email</td>
+                    <td>Telefone</td>
+                    <td>Cidade</td>
+                    <td>Ação</td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!--
+                <tr>
+                    <td>Pedro</td>
+                    <td>pedro@gmail.com</td>
+                    <td>11 9599324214</td>
+                    <td>Itaquaquecetuba</td>
+                    <td>
+                        <span>
+                            <i class="far fa-edit"></i>
+                            <i class="fas fa-trash"></i>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pedro</td>
+                    <td>pedro@gmail.com</td>
+                    <td>11939932554</td>
+                    <td>Itaquaquecetuba</td>
+                    <td>
+                        <span>
+                            <i class="far fa-edit"></i>
+                            <i class="fas fa-trash"></i>
+                        </span>
+                    </td>
+                </tr>
+                -->
+            </tbody>
+        </table>
+    </section>
+    <div class="modal-principal">
+        <div class="modal-cadastrar">
+            <div class="modal-header">
+                <h2>Novo Cliente</h2>
+            </div>
+            <form action="">
+                <div class="inputs-digitar">
+
+                    <div class="inputs">
+                        <label for="nome">Nome</label>
+                        <input type="text" placeholder="Digite o nome" id="nome">
+                    </div>
+                    <div class="inputs">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Digite seu email" id="email">
+                    </div>
+                    <div class="inputs">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" placeholder="Digite seu telefone" id="telefone">
+                    </div>
+                    <div class="inputs">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" placeholder="Digite seu cidade" id="cidade">
+                    </div>
+                </div>
+                <div class="msg-erro">
+                    <p>Preencha os campos acima</p>
+                </div>
+                
+                <div class="inputs-btn">
+                    <input type="submit" value="Enviar" class="butao" id="enviar">
+                    <button id="cancelar" class="butao">Limpar</button>
+                    <button id="fechar">x</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+header{
+    background-color: rgb(39, 119, 240);
+    width: 100%;
+    height: 10vh;
+}
+
+.center{
+    margin: 0 auto;
+    max-width: 1200px;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: .3rem;
+}
+
+ul li{
+    padding: 8px 12px;
+    
+    color: white;
+    font-size: 12pt;
+    transition: .4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+ul li:hover{
+    background-color: white;
+    color: rgb(39, 119, 240);
+}
+
+header h1{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
+}
+
+button#hamb{
+    width: 29px;
+    height: 25px;
+    background: none;
+    outline: none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    display: none;
+}
+
+button#hamb span{
+    display: block;
+    border-top: 3px solid white;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+}
+
+button#hamb span::before, button#hamb span::after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    display: block;
+    background-color: white;
+    position: absolute;
+}
+
+button#hamb span::before{
+    top: 8px;
+}
+
+button#hamb span::after{
+    top: 20px;
+}
+
+section{
+    width: 100%;
+    height: 75vh;
+}
+
+.slide{
+    width: 80%;
+    transition: .5s all ease-in-out;
+    margin: 0 auto;
+    height: inherit;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides-all{
+    width: calc(100% * 3);
+    height: inherit;
+    display: flex;
+    transition: .5s all ease-in-out;
+}
+
+.slides-all .imagens{
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#imagem1{
+    background-image: url(slide1.jpg);
+}
+
+#imagem2{
+    background-image: url(slide2.jpg);
+}
+
+#imagem3{
+    background-image: url(slide3.jpg);
+}
+
+.interacoes{
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .5s all ease-in-out;
+}
+
+.btn:hover{
+    background-color: teal;
+}
+
+.btn:hover i {
+    color: rgba(255, 255, 255, .7);
+    transform: scale(1.2);
+}
+
+.btn i {
+    color: teal;
+    font-size: 15pt;
+    transition: .5s all ease-in-out;
+}
+
+.ball{
+    width: 17px;
+    height: 17px;
+    background-color: rgba(255, 255, 255, .8);
+    border: 2px solid teal;
+    outline: none;
+    border-radius: 50%;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+}
+
+.balls{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    gap: .8rem;
+    height: inherit;
+    transition: .3s all ease-in-out;
+}
+
+.ball:hover{
+    transform: scale(1.1);
+    background-color: teal;
+    border: 2px solid rgba(255, 255, 255, .8);
+}
+
+.ball.active{
+    transform: scale(1.1);
+    background-color: teal;
+    border: 2px solid rgba(255, 255, 255, .8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 660px){
+    button#hamb{
+        display: block;
+    }
+
+    nav{
+        transition: .4s;
+    }
+
+    .slide{
+        width: 100%;
+    }
+
+    nav.active{
+        position: fixed;
+        width: 300px;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color: rgb(39, 119, 240);
+        z-index: 10;
+    }
+
+    nav.active button#hamb{
+        position: absolute;
+        top: 2.5vh;
+        left: 10px;
+    }
+
+    nav.active ul{
+        flex-direction: column;
+        width: inherit;
+        display: flex;
+    }
+
+    button#hamb span{
+        transition: .2s all ease-in-out;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav.active button#hamb span{
+        transform: rotate(45deg);
+        top: 10px;
+    }
+
+    nav.active button#hamb span::after{
+        transform: rotate(-90deg);
+        top: -3px;
+    }
+
+    nav.active button#hamb span::before{
+        display: none;
+    }
+}
